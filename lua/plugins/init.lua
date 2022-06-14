@@ -9,9 +9,6 @@ return require'packer'.startup(function()
     use 'christoomey/vim-tmux-navigator'
     use 'tyewang/vimux-jest-test'
 
-    use 'alvan/vim-closetag'
-    use 'tpope/vim-surround'
-
     use 'tpope/vim-commentary'
 
     -- Git
@@ -26,6 +23,30 @@ return require'packer'.startup(function()
     }
 
     -- Completition
+    use 'alvan/vim-closetag'
+    use 'tpope/vim-surround'
 
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'windwp/nvim-autopairs'
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-lua/popup.nvim" },
+			{ "nvim-telescope/telescope-fzy-native.nvim" },
+			{ "kyazdani42/nvim-web-devicons" },
+			{ "nvim-telescope/telescope-file-browser.nvim" },
+			{ "nvim-telescope/telescope-dap.nvim" },
+			{ "nvim-telescope/telescope-ui-select.nvim" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+        },
+    }
     
 end)
