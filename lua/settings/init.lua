@@ -19,9 +19,9 @@ set.laststatus = 2
 
 set.expandtab = true
 set.smarttab = true
-set.shiftwidth = 4
-set.tabstop = 4
-set.softtabstop = 2
+-- set.shiftwidth = 4
+-- set.tabstop = 4
+-- set.softtabstop = 2
 
 set.hlsearch = true
 set.incsearch = true
