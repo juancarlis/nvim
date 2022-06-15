@@ -1,19 +1,22 @@
--- local telescope_mapper = require('mappings.telescope')
+local telescope_mapper = require('settings.telescope.mappings')
 
-local filetype_attach = setmetatable({
-	go = function(_)
-		vim.cmd([[
-      augroup lsp_buf_format
-        au! BufWritePre <buffer>
-        autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()
-      augroup END
-    ]])
+local filetype_attach = setmetatable(
+
+    {
+        go = function(_)
+            vim.cmd([[
+          augroup lsp_buf_format
+            au! BufWritePre <buffer>
+            autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()
+          augroup END
+        ]])
 	end,
-}, {
-	__index = function()
-		return function() end
-	end,
-})
+    }, 
+    {
+        __index = function()
+            return function() end
+        end,
+    })
 
 local function on_attach(client)
 	local filetype = vim.api.nvim_buf_get_option(0, "filetype")
@@ -28,9 +31,13 @@ local function on_attach(client)
 	vim.keymap.set("i", "<c-h>", vim.lsp.buf.signature_help, { buffer = 0 })
 	vim.keymap.set("n", "<leader>vo", ":LspRestart<cr>", { noremap = true })
 
-	-- telescope_mapper("gr", "lsp_references", nil, true)
-	-- telescope_mapper("<leader>pv", "find_symbol", nil, true)
-	-- telescope_mapper("<leader>pd", "lsp_document_symbols", nil, true)
+    -- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {buffer = 0})
+    -- vim.keymap.set("n", "gr", vim.lsp.buf.references, {buffer = 0})
+    -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
+
+	telescope_mapper("gr", "lsp_references", nil, true)
+	telescope_mapper("<leader>pv", "find_symbol", nil, true)
+	telescope_mapper("<leader>pd", "lsp_document_symbols", nil, true)
 
 	vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
 
@@ -66,3 +73,13 @@ for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
+
+
+-- require('lspconfig').pyright.setup{
+--     settings = {
+--       pyright = {
+--           disableLanguageServices = true,
+--           disableOrganizeImports  = true,
+--         }
+--     }
+-- }

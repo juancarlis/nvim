@@ -14,6 +14,12 @@ return require'packer'.startup(function()
     -- Git
     use 'tpope/vim-fugitive'
     use 'airblade/vim-gitgutter'
+    use({
+		"ThePrimeagen/git-worktree.nvim",
+		config = function()
+			require("git-worktree").setup({})
+		end,
+	})
 
     -- language packages
     use {
@@ -33,8 +39,13 @@ return require'packer'.startup(function()
     use 'hrsh7th/cmp-nvim-lsp'
     use 'saadparwaiz1/cmp_luasnip'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
-    use 'windwp/nvim-autopairs'
 
+    use { 
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    -- Telescope
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
@@ -48,5 +59,15 @@ return require'packer'.startup(function()
 			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
         },
     }
+
+    use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+		requires = {
+			"nvim-treesitter/playground",
+			"nvim-treesitter/nvim-treesitter-refactor",
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		},
+	})
     
 end)

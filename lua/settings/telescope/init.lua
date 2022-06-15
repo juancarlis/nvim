@@ -4,7 +4,7 @@ local reloader = function()
 	if SHOULD_RELOAD_TELESCOPE then
 		RELOAD("plenary")
 		RELOAD("telescope")
-		RELOAD("alpha.telescope.setup")
+		RELOAD("telescope.setup")
 	end
 end
 
