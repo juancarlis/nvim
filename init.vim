@@ -17,6 +17,12 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python set colorcolumn=120
 
+
+" Open terminal split
+vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+
+
 "" Running through /etc/vim/vimrc
 " set runtimepath^=~/.vim runtimepath+=~/.vim/after
 " let &packpath=&runtimepath
