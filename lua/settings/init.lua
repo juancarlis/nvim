@@ -9,6 +9,7 @@ set.mouse = 'a'
 set.updatetime=100 --update time for GitGutter
 set.fileencoding = 'utf-8'
 set.splitright = true
+set.splitbelow = true
 
 set.number = true
 set.numberwidth = 1
@@ -30,6 +31,7 @@ set.smartcase = true
 
 set.termguicolors = true
 set.hidden = true
+
 
 --set.clipboard='unnamedplus'
 
