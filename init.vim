@@ -22,6 +22,8 @@ autocmd FileType python set colorcolumn=120
 vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
 nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
 
+vnoremap < <gv
+vnoremap > >gv
 
 "" Running through /etc/vim/vimrc
 " set runtimepath^=~/.vim runtimepath+=~/.vim/after

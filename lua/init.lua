@@ -7,7 +7,10 @@ require('mappings')
 -- require('nvim-autopairs').setup{}
 require('globals')
 require('settings.lsp')
-require('settings.telescope.mappings')
+require('settings.telescope')
+-- require('settings.telescope.mappings')
 require('settings.nvim-cmp')
+
+require('settings.dbui')
 
 -- require('utils')

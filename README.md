@@ -12,3 +12,6 @@ Install NeoVIM
 ```bash
 
 ```
+
+# Clean, updates and compiles plugins
+PackerSync

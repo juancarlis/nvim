@@ -56,7 +56,8 @@ require("telescope").setup {
     mappings = {
       i = {
         ["<C-x>"] = false,
-        ["<C-s>"] = actions.select_horizontal,
+        ["<C-i>"] = actions.select_horizontal,
+        ["<C-s>"] = actions.select_vertical,
         ["<C-n>"] = "move_selection_next",
 
         ["<C-y>"] = set_prompt_to_entry_value,

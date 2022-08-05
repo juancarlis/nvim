@@ -69,5 +69,14 @@ return require'packer'.startup(function()
 			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 	})
+
+  -- Databases
+  use {
+      'kristijanhusak/vim-dadbod-ui',
+      requires = {
+        'tpope/vim-dadbod',
+        'tpope/vim-dotenv',
+      }
+  }
     
 end)
