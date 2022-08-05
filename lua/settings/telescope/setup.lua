@@ -160,15 +160,15 @@ require("telescope").setup {
     },
   },
 }
-_ = require("telescope").load_extension "dap"
-_ = require("telescope").load_extension "notify"
-_ = require("telescope").load_extension "file_browser"
-_ = require("telescope").load_extension "ui-select"
-_ = require("telescope").load_extension "fzf"
-_ = require("telescope").load_extension "git_worktree"
+-- _ = require("telescope").load_extension "dap"
+-- _ = require("telescope").load_extension "notify"
+-- _ = require("telescope").load_extension "file_browser"
+-- _ = require("telescope").load_extension "ui-select"
+-- _ = require("telescope").load_extension "fzf"
+-- _ = require("telescope").load_extension "git_worktree"
 -- _ = require("telescope").load_extension "neoclip"
 -- _ = require("telescope").load_extension "frecency"
 -- _ = require("telescope").load_extension "smart_history"
 -- _ = require("telescope").load_extension "projectionist"
 -- _ = require("telescope").load_extension "laravel"
-_ = require("telescope").load_extension("refactoring")
+-- _ = require("telescope").load_extension("refactoring")
