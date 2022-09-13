@@ -229,7 +229,7 @@ _G.packer_plugins = {
   ["vim-dadbod-ui"] = {
     loaded = true,
     path = "/home/jcarlis/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
-    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+    url = "https://github.com/juancarlis/vim-dadbod-ui"
   },
   ["vim-dotenv"] = {
     loaded = true,
