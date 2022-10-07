@@ -2,6 +2,14 @@
 
 Install NeoVIM
 
+Clone repository
+
+Remove packer_compiled.lua file:
+```bash
+rm ~/.config/nvim/plugin/packer_compiled.lua
+```
+
+
 
 ## Setup vim config folder
 ```bash
