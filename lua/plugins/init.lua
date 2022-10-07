@@ -72,7 +72,8 @@ return require'packer'.startup(function()
 
   -- Databases
   use {
-      'kristijanhusak/vim-dadbod-ui',
+      -- 'kristijanhusak/vim-dadbod-ui',
+      'juancarlis/vim-dadbod-ui',
       requires = {
         'tpope/vim-dadbod',
         'tpope/vim-dotenv',
