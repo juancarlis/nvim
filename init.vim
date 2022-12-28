@@ -3,6 +3,7 @@ lua require 'init'
 source ~/.config/nvim/lua/utils/yank_support.vim
 source ~/.config/nvim/lua/utils/closetags.vim
 source ~/.config/nvim/lua/utils/git.vim
+source ~/.config/nvim/lua/utils/macros.vim
 " source ~/.config/nvim/lua/mappings/completion.vim
 
 "Enable CTRL-V in terminal mode
@@ -16,6 +17,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 " On Python files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python set colorcolumn=120
+autocmd FileType dbout setlocal nofoldenable
 
 
 " Open terminal split

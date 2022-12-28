@@ -4,7 +4,7 @@ require('plugins')
 require('nvim-tree-config')
 require('mappings')
 
--- require('nvim-autopairs').setup{}
+require('nvim-autopairs').setup{}
 require('globals')
 require('settings.lsp')
 require('settings.telescope')

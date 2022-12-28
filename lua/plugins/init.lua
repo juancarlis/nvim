@@ -76,6 +76,7 @@ return require'packer'.startup(function()
       'juancarlis/vim-dadbod-ui',
       requires = {
         'tpope/vim-dadbod',
+        -- 'juancarlis/vim-dadbod',
         'tpope/vim-dotenv',
       }
   }
