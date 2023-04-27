@@ -28,8 +28,7 @@ set.hlsearch = true
 set.incsearch = true
 set.ignorecase = true
 set.smartcase = true
-
-set.termguicolors = true
+-- set.termguicolors = true
 set.hidden = true
 
 

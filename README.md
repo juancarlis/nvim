@@ -23,3 +23,11 @@ rm ~/.config/nvim/plugin/packer_compiled.lua
 
 # Clean, updates and compiles plugins
 PackerSync
+
+
+# Import installs
+Para el correcto funcionamiento de grep Telescope
+```bash
+sudo apt install ripgrep
+
+```

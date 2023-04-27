@@ -40,13 +40,21 @@ function M.search_config()
 end
 
 function M.grep_string()
-	vim.ui.input("Grep for > ", function(input)
-		if input == nil then
-			return
-		end
-		require("telescope.builtin").grep_string({ search = input })
-	end)
+  local input = vim.fn.input("Grep for > ")
+  if input == nil or input == "" then
+    return
+  end
+  require("telescope.builtin").grep_string({ search = input })
 end
+
+-- function M.grep_string()
+-- 	vim.ui.input("Grep for > ", function(input)
+-- 		if input == nil then
+-- 			return
+-- 		end
+-- 		require("telescope.builtin").grep_string({ search = input })
+-- 	end)
+-- end
 
 function M.grep_word()
 	require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") })
